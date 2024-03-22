@@ -13,10 +13,64 @@
         <img class="logo" src="LOGO.png" alt="LOGO" />
       </a>
       <a href="index.html" class="link">Home/Projects</a>
-      <a href="" class="link">C++ Tutorials</a>
+      <a href="https://176f1da7-26f3-40e7-94b6-111abeca2087-00-3vdlr1056daa4.kirk.replit.dev" class="link">C++ Tutorials</a>
       <a href="about.html" class="link">About</a>
+      
+      <div class="flex-nav">
+        <input class="search" type="text" id="userInput" placeholder="Search projects..." onkeydown="checkEnter(event)">
+        <button class="send" onclick="showInput()"><img class="search" src="search.png" alt="search" /></button>
+      </div>
+
+      
+      <script>
+        function showInput() {
+          var userInput = document.getElementById('userInput').value.toLowerCase(); ;
+          
+          var x = ["stbg", "slime fighter", "cubey | official website", "facebook simulator", "gadgets", "secret docs"];
+          var y = 0;
+          var recorder = 0;
+          for(var i = 0; i < x.length; i++) {
+            recorder++;
+            if(userInput === x[i]) {
+              y = 1;
+              break;
+            }
+          }
+          
+
+          if(y === 1) {
+            window.location.href = "#" + recorder;
+          }
+
+            
+          else {
+            document.getElementById("output").innerHTML = "Invalid Password. Please try again!";
+          }
+        }
+        function checkEnter(event) {
+          if(event.key === "Enter") {
+            showInput();
+          }
+        }
+      </script>
+      <p id="output" class="output"></p>
     </nav>
     <div class="heading">
+      <div id="myDiv" class="disclaimer">
+
+        <a class="x" onclick="hideDiv()">X</a>
+        
+        <h3 class="info">Hey! If you are reading this message right now, just know that this website is still in progress, so there might be some bugs.</h3>
+      </div>
+      
+      <script>
+        
+        function hideDiv() {
+          document.getElementById('myDiv').style.display = 'none';
+        }
+      </script>
+
+      
       <h1 class="heading">Explore some of my olds projects here.</h1>
       <h2 class="heading">(Don't expect much right now.)</h2>
     </div>
@@ -25,7 +79,7 @@
     <div class="section">
       <h1 class="heading-info">Some of my best releases:</h1>
       <div class="flex">
-        <div class="block">
+        <div class="block" id="1">
           <h2 class="info">STBG</h2>
           <h3 class="info">Info:</h3>
           <p class="info">
@@ -44,7 +98,7 @@
           </div>
         </div>
 
-        <div class="block">
+        <div class="block" id="2">
           <h2 class="info">Slime Fighter</h2>
           <h3 class="info">Info:</h3>
           <p class="info">
@@ -61,7 +115,7 @@
           </div>
         </div>
 
-        <div class="block">
+        <div class="block" id="3">
           <h2 class="info">Cubey | Ofiicial website</h2>
           <h3 class="info">Info:</h3>
           <p class="info">
@@ -76,7 +130,7 @@
         </div>
         
 
-        <div class="block">
+        <div class="block" id="4">
           <h2 class="info">Facebook Simulator</h2>
           <h3 class="info">Info:</h3>
           <p class="info">
@@ -94,7 +148,7 @@
           </div>
         </div>
 
-        <div class="block">
+        <div class="block" id="5">
           <h2 class="info">Gadgets</h2>
           <h3 class="info">Info:</h3>
           <p class="info">
@@ -110,7 +164,7 @@
           </div>
         </div>
         
-        <div class="block">
+        <div class="block" id="5">
           <h2 class="info">Secret Docs</h2>
           <h3 class="info">Info:</h3>
           <p class="info">
@@ -119,12 +173,12 @@
           <h3 class="info">Written in: HTML, CSS, Javascript</h3>
           <div class="button">
             <a
-              href="https://replit.com/@NinjaJunior/Aidens-Passwoord-simulater#index.html"
+              href="https://176f1da7-26f3-40e7-94b6-111abeca2087-00-3vdlr1056daa4.kirk.replit.dev/index.html"
               class="button" target="_blank"
               >Check it out!</a>
           </div>
         </div>
-        <div class="block">
+        <div class="block" id="6">
           <h2 class="info">Random Number Bubble Sorting</h2>
           <h3 class="info">Info:</h3>
           <p class="info">
@@ -141,7 +195,7 @@
 
       </div>
     </div>
-    <div class="section">
+    <div class="section" id="7">
       <h1 class="heading-info">Test projects: (Not finished)</h1>
       <div class="flex">
         <div class="block">
@@ -160,7 +214,7 @@
             >
           </div>
         </div>
-        <div class="block">
+        <div class="block" id="8">
           <h2 class="info">Gadgets</h2>
           <h3 class="info">Info:</h3>
           <p class="info">
@@ -176,7 +230,7 @@
             >
           </div>
         </div>
-        <div class="block">
+        <div class="block" id="9">
           <h2 class="info">Gadgets</h2>
           <h3 class="info">Info:</h3>
           <p class="info">
@@ -196,7 +250,7 @@
     </div>
     <footer>
       <h1 class="footer">Thanks for visiting my small website!</h1>
-      <h1 class="footer">&copy;Cubey</h1>
+      <h1 class="footer">&copy;2024 Cubey</h1>
       <h1 class="footer">All rights reserved.</h1>
     </footer>
   </body>
