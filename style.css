@@ -262,9 +262,11 @@ p.good_output {
 div.flex-nav {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
 }
+
+
 
 input.search {
   
