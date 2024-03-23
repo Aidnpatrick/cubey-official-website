@@ -5,7 +5,6 @@ body {
 
 
 a.link {
-
   flex-wrap: wrap;
   font-weight: bold;
   color: #6098f0;
@@ -78,6 +77,12 @@ p.about {
   font-size: 28px;
 }
 
+@media (max-width: 900px) {
+  p.about {
+    font-size: 20px;
+  }
+}
+
 img.logo {
   width: 40px;
   margin: 12px;
@@ -98,12 +103,18 @@ img.search {
   width: 26px;
   border-radius: 20px;
 }
-
+@media (max-width: 900px) {
+  img.search {
+    margin-inline: -10px;
+    width: 20px;
+    border-radius: 20px;
+  }
+}
 
 h1.footer {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 nav.block {
@@ -115,11 +126,10 @@ nav.block {
   background-color: #121212;
   padding-block: 6px;
   position: sticky;
-  width: 100%;
   top: 0;
   z-index: 1000;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   nav.block {
     justify-content: center;
     text-align: center;
@@ -130,6 +140,7 @@ nav.block a:first-child {
 }
 
 div.heading {
+  width: 100%;
   background-size: cover;
   padding-block: 70px;
   background-repeat: no-repeat;
@@ -162,9 +173,16 @@ div.block {
   border-radius: 12px;
   margin: 30px;
   width: 400px;
-  height: 350px;
+  height: 390px;
   background-color: #363636;
   transition: border-color 0.2s ease;
+}
+
+@media (max-width: 1000px) {
+  div.block {
+    width: 290px;
+    height: 430px;
+  }
 }
 
 div.block:hover {
@@ -262,8 +280,15 @@ input.search {
   background-color: #1c1c1c;
 }
 
+@media (max-width: 900px) {
+  input.search {
+    height: 40px;
+  }
+}
+
 button.send {
-  
+  align-items: center;
+  justify-content: center;
   font-size: 20px;
   color: white;
   height: 30px;
@@ -273,6 +298,13 @@ button.send {
   border: thin solid #b0b0b0;
   transition: ease 0.2s;
 
+}
+
+@media (max-width: 900px) {
+  button.send {
+    height: 40px;
+    width: 40px;
+  }
 }
 
 button.send:hover {

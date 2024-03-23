@@ -21,7 +21,7 @@ function showInput() {
 
 
   else {
-    document.getElementById("bad_output").innerHTML = "Invalid Password. Please try again!";
+    document.getElementById("bad_output").innerHTML = "Invalid project name, please try again.";
     element.remove("good_output");
   }
 }
