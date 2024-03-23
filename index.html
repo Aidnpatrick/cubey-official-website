@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>Home (Aiden | TAM)</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
     <link rel="icon" type="image/x-icon" href="LOGO.png">
   </head>
   <body>
@@ -22,38 +23,9 @@
       </div>
 
       
-      <script>
-        function showInput() {
-          var userInput = document.getElementById('userInput').value.toLowerCase(); ;
-          
-          var x = ["stbg", "slime fighter", "cubey | official website", "facebook simulator", "gadgets", "secret docs"];
-          var y = 0;
-          var recorder = 0;
-          for(var i = 0; i < x.length; i++) {
-            recorder++;
-            if(userInput === x[i]) {
-              y = 1;
-              break;
-            }
-          }
-          
-
-          if(y === 1) {
-            window.location.href = "#" + recorder;
-          }
-
-            
-          else {
-            document.getElementById("output").innerHTML = "Invalid Password. Please try again!";
-          }
-        }
-        function checkEnter(event) {
-          if(event.key === "Enter") {
-            showInput();
-          }
-        }
-      </script>
-      <p id="output" class="output"></p>
+      
+      <p id="bad_output" class="bad_output"></p>
+      <p id="good_output" class="good_output"></p>
     </nav>
     <div class="heading">
       <div id="myDiv" class="disclaimer">
@@ -62,13 +34,6 @@
         
         <h3 class="info">Hey! If you are reading this message right now, just know that this website is still in progress, so there might be some bugs.</h3>
       </div>
-      
-      <script>
-        
-        function hideDiv() {
-          document.getElementById('myDiv').style.display = 'none';
-        }
-      </script>
 
       
       <h1 class="heading">Explore some of my olds projects here.</h1>

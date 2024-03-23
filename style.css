@@ -228,20 +228,26 @@ footer {
 }
 
 
-p.output {
+p.bad_output {
   margin: 12px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   color: red;
   
 }
-
+p.good_output {
+  margin: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: green;
+}
 div.flex-nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
 }
+
 input.search {
   
   margin-left: 12px;
