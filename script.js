@@ -1,7 +1,7 @@
 function showInput() {
   var userInput = document.getElementById('userInput').value.toLowerCase(); ;
 
-  var x = ["stbg", "slime fighter", "cubey | official website", "facebook simulator", "gadgets", "secret docs"];
+  var x = ["stbg", "slime fighter", "cubey | official website", "facebook simulator", "gadgets", "secret docs", "random number bubble sorting"];
   var y = 0;
   var recorder = 0;
   for(var i = 0; i < x.length; i++) {
