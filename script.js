@@ -16,13 +16,13 @@ function showInput() {
   if(y === 1) {
     window.location.href = "#" + recorder;
     document.getElementById("good_output").innerHTML = "Redirecting...";
-    elementToRemove.remove("bad_output");
+    document.getElementById("bad_output").innerHTML = "";
   }
 
 
   else {
     document.getElementById("bad_output").innerHTML = "Invalid project name, please try again.";
-    element.remove("good_output");
+    document.getElementById("good_output").innerHTML = "";
   }
 }
 
