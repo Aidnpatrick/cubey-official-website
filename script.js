@@ -19,9 +19,13 @@ function showInput() {
     document.getElementById("bad_output").innerHTML = "";
   }
 
-
-  else {
+  else if(userInput != "" && y == 0) {
     document.getElementById("bad_output").innerHTML = "Invalid project name, please try again.";
+    document.getElementById("good_output").innerHTML = "";
+  }
+
+  else if(userInput == "") {
+    document.getElementById("bad_output").innerHTML = "Please enter something";
     document.getElementById("good_output").innerHTML = "";
   }
 }
