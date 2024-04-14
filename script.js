@@ -1,41 +1,51 @@
 function showInput() {
-  var userInput = document.getElementById('userInput').value.toLowerCase(); ;
+  let userInput = document.getElementById('userInput').value.toLowerCase();
+  let library = ["stbg", "slime fighter", "cubey offical website", "facebook simulator", "gadgets", "secret docs", "random number bubble sorting"];
+  
+  let word_points = Array(library.length).fill(0);
+  for (let i = 0; i < library.length; i++) {
+    let word = library[i];
 
-  var x = ["stbg", "slime fighter", "cubey | official website", "facebook simulator", "gadgets", "secret docs", "random number bubble sorting"];
-  var y = 0;
-  var recorder = 0;
-  for(var i = 0; i < x.length; i++) {
-    recorder++;
-    if(userInput === x[i]) {
-      y = 1;
-      break;
+    
+    for (let j = 0; j < word.length; j++) {
+      if (word[j] === userInput[j]) {
+        word_points[i]++;
+      }
     }
   }
-
-
-  if(y === 1) {
-    window.location.href = "#" + recorder;
-    document.getElementById("good_output").innerHTML = "Redirecting...";
-    document.getElementById("bad_output").innerHTML = "";
+  
+  console.log("\nAll data of searches(Don't mind this): \n");
+  for (let i = 0; i < library.length; i++) {
+    console.log("[" + library[i] + " : " + word_points[i] + "]" + "\n");
+  }
+  
+  let maxPoints = Math.max(...word_points);
+  let maxIndices = [];
+  for (let i = 0; i < word_points.length; i++) {
+    if (word_points[i] === maxPoints) {
+      maxIndices.push(i);
+    }
+  }
+  if (maxIndices.length > 0) {
+    let maxIndex = maxIndices[0];
+    window.location.href = "#" + (maxIndex + 1);
+    console.log(library[maxIndex]);
+    console.log(maxIndex + 1);
   }
 
-  else if(userInput != "" && y == 0) {
-    document.getElementById("bad_output").innerHTML = "Invalid project name, please try again.";
-    document.getElementById("good_output").innerHTML = "";
-  }
-
-  else if(userInput == "") {
-    document.getElementById("bad_output").innerHTML = "Please enter something";
-    document.getElementById("good_output").innerHTML = "";
-  }
 }
-
+  
 function checkEnter(event) {
-  if(event.key === "Enter") {
+  if (event.key === "Enter") {
     showInput();
   }
 }
 
-function hideDiv() {
-  document.getElementById('myDiv').style.display = 'none';
-}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const disclaimer = document.getElementById('disclaimer');
+  const closee = document.getElementById("closee");
+  closee.addEventListener("click", () => {
+    disclaimer.style.display = 'none';
+  })
+});
