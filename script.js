@@ -1,6 +1,9 @@
 function showInput() {
+  let library = ["stbg", "slime fighter", "cubey offical website", "facebook simulator", "gadgets", "secret docs", "random number bubble sorting", "c++ search engine"];
+
   let userInput = document.getElementById('userInput').value.toLowerCase();
-  let library = ["stbg", "slime fighter", "cubey offical website", "facebook simulator", "gadgets", "secret docs", "random number bubble sorting"];
+  
+  localStorage.setItem("userInput", userInput);
   
   let word_points = Array(library.length).fill(0);
   for (let i = 0; i < library.length; i++) {
@@ -33,8 +36,11 @@ function showInput() {
     console.log(maxIndex + 1);
   }
 
+  else {
+    
+  }
 }
-  
+
 function checkEnter(event) {
   if (event.key === "Enter") {
     showInput();
@@ -42,10 +48,19 @@ function checkEnter(event) {
 }
 
 
+//dislcaimer
 document.addEventListener("DOMContentLoaded", () => {
+  
   const disclaimer = document.getElementById('disclaimer');
+  localStorage.setItem("disclaimer", "open");
+
+  
+  
   const closee = document.getElementById("closee");
+  
   closee.addEventListener("click", () => {
     disclaimer.style.display = 'none';
   })
 });
+
+

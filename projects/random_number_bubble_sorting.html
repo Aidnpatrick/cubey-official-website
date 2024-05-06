@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cubey Official Website</title>
+  <link rel="icon" type="image/x-icon" href="/LOGO-removebg-preview.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #fullscreenDiv {
+      width: 100vw;
+      height: 100vh;
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <nav class="block">
+    <a href="/home.html">
+      <img class="logo" src="LOGO.png" alt="LOGO" />
+    </a>
+    <a href="/home.html" class="link">Home/Projects</a>
+    <a href="https://176f1da7-26f3-40e7-94b6-111abeca2087-00-3vdlr1056daa4.kirk.replit.dev" class="link">C++ Tutorials</a>
+    <a href="/about.html" class="link">About</a>
+  </nav>
+
+  <div class="content">
+    <div id="projectContainer">
+      <iframe id="fullscreenIframe" src="https://replit.com/@NinjaJunior/Rand-num-bubble-sort?lite=true" width="770" height="600" frameborder="0" allowfullscreen class="project"></iframe>
+    </div>
+    <div class="project-bar">
+      <h1 class="project-bar-title">Random number bubble sort</h1>
+      <button id="fullscreenButton" class="fullscreen">Fullscreen</button>
+    </div>
+    <br>
+    <div class="project-info">
+      <h1 class="heading-info">About this project:</h1>
+      <h3 class="info">Info:</h3>
+      <p class="info">
+        This project is a bubble sorting algorithm. It generates 10 random numbers, then sorts them. This prject may seem simple, but it is very important for coding and stuff. Next update: I am going to add user input for how many number the software is going to create.
+      </p>
+      <h3 class="info">Written in: C++</h3>
+      <h3 class="info">Link:</h3>
+      <a class="info" href="https://replit.com/@NinjaJunior/Rand-num-bubble-sort#main.cpp">https://replit.com/@NinjaJunior/Rand-num-bubble-sort#main.cpp</a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const fullscreenButton = document.getElementById('fullscreenButton');
+      const fullscreenIframe = document.getElementById('fullscreenIframe');
+
+      fullscreenButton.addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+          fullscreenIframe.requestFullscreen();
+        } else {
+          document.exitFullscreen();
+        }
+      });
+
+      document.addEventListener('fullscreenchange', () => {
+        if (!document.fullscreenElement) {
+          // Exit fullscreen mode
+          document.getElementById('projectContainer').classList.remove('fullscreen');
+        } else {
+          // Enter fullscreen mode
+          document.getElementById('projectContainer').classList.add('fullscreen');
+        }
+      });
+    });
+  </script>
+  <br>
+  <footer>
+    <h1 class="footer">Thanks for visiting my small website! 🐒</h1>
+    <h1 class="footer">&copy;2024 Cubey</h1>
+    <h1 class="footer">All rights reserved.</h1>
+  </footer>
+</body>
+</html>
